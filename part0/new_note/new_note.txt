@@ -1,0 +1,42 @@
+browser-->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_notes
+
+note over browser:
+Browser sends a POST request for the new note
+end note
+
+server--->browser: 302 Found 
+
+note over browser:
+Server responds with 302 Found performing a URL redirect
+end note
+
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+
+note over browser:
+Browser send a GET request for notes
+and the browser reloads the Notes page
+After reloading the Notes page all the next steps happen
+end note
+
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server--->browser: main.css
+
+note over browser:
+Browser fetches the stylesheet
+end note
+
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server--->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
