@@ -1,0 +1,11 @@
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+
+note over browser:
+Browser sends a GET request to the server for the notes 
+end note
+
+server--->browser: 200 ok 
+
+note over browser:
+Server responds with http status code 200 message ok
+end note
